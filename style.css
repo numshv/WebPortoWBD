@@ -9,6 +9,15 @@
   --navbar-height: 60px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+section[id] {
+    scroll-margin-top: 80px; 
+}
+
+
 body {
     background-color: #ffffff;
     margin: 0px;
@@ -26,6 +35,11 @@ body {
 
 h1{
     font-size: 50px;
+}
+
+h2{
+    font-size: 35px;
+    margin: 0px;
 }
 
 h3{
@@ -91,8 +105,20 @@ p{
     justify-content: space-around;
     width: 100%;
     flex-wrap: wrap;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     gap: 20px;
+}
+
+.container-col{
+    min-height: calc(100vh - var(--navbar-height));
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-around;
+    /* justify-content: space-between;
+    width: fit-content;
+    flex-wrap: wrap;
+    margin-top: 20px; */
 }
 
 .half-container{
@@ -232,6 +258,7 @@ p{
 hr{
     border-top: 1px solid #060606;
     margin: 20px 0;
+    width: 100%;
 }
 
 .profile-text-container{
@@ -308,16 +335,127 @@ figure{
     margin: 0px;
 }
 
+.projects-container{
+    max-width: 1250px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.project-card{
+    width: 400px;
+    height: fit-content;
+    padding: 10px 10px;
+}
+
+
+.project-card-header{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.code-icon{
+    background-color: #ffffff;
+    border: 2px solid #060606;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.project-header-text{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.buttons{
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    gap: 10px;
+}
+
+.white{
+    font-family: 'Roboto Mono', 'SF Mono', 'Consolas';;
+    font-size: 12px;
+    border: 2px solid #060606;
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+.white:hover{
+    background-color: #F4FD6F;
+}
+
+.yellow-button{
+    font-family: 'Roboto Mono', 'SF Mono', 'Consolas';;
+    font-size: 18px;
+    border: 2px solid #060606;
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 10px 10px;
+    font-weight: bold;
+}
+
+.yellow-button:hover{
+    background-color: #060606;
+    color: #ffffff;
+}
+
+.projects-footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    
+}
+
+.projects-footer .half-container{
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 
 @media (max-width: 1000px){
     .container{
-    height: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    gap: 20px;
-}
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100vw;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        gap: 20px;
+    }
+
+    .container-col{
+        min-height: auto;
+    }
+
+    .projects-footer .half-container {
+        max-width: 100%; /* Biarkan setiap bagian mengambil lebar penuh */
+    }
+
+    .projects-footer{
+        display: flex;
+        align-items: center;
+        margin: 10px 20px;
+        gap: 30px;
+        width: 80vw;
+        
+    }
 }
