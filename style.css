@@ -90,6 +90,7 @@ p{
     font-size: 14px;
     font-weight: bold;
     text-decoration: none;
+    transition: all 0.2s ease-in-out;
 }
 
 .navbar-link:hover{
@@ -428,6 +429,41 @@ figure{
     flex-direction: column;
     gap: 10px;
 }
+
+/* last minute added micro interactions lmao */
+
+.project-card,
+.label-blue,
+.white,
+.yellow-button {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.project-card:hover,
+.label-blue:hover,
+.white:hover,
+.yellow-button:hover {
+    transform: translateY(-4px); 
+}
+
+#github, #linkedin, #twitter, #instagram {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.2s ease-in-out; 
+}
+
+#github:hover,
+#linkedin:hover,
+#twitter:hover,
+#instagram:hover {
+    transform: scale(1.15); 
+}
+
+
 
 
 @media (max-width: 1000px){
