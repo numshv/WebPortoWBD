@@ -19,6 +19,41 @@ body {
     color: #060606;
 }
 
+.grey-text{
+    color: #848484;
+    margin: 0px;
+}
+
+h1{
+    font-size: 50px;
+}
+
+h3{
+    font-size: 30px;
+    margin: 0px;
+}
+
+h4{
+    font-size: 20px;
+    margin: 0px;
+}
+
+p{
+    font-size: 14px;
+}
+
+.p-bigger{
+    font-size: 16px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.no-margin{
+    margin: 0;
+}
+
 .navbar{
     display: flex;
     border-bottom: 2px solid #060606;
@@ -55,20 +90,29 @@ body {
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 20px;
 }
 
-/* .half-container{
-    width: 40%;
-} */
+.half-container{
+    max-width: 500px;
+}
 
-.label{
+.label-yellow{
     border: 2px solid #060606;
     border-radius: 10px;
+    background-color: #F4FD6F;
+}
+
+.label-blue{
+    border: 2px solid #060606;
+    border-radius: 10px;
+    background-color: #B7ECFC;
+    padding: 5px 10px;
 }
 
 .text-rotator{
-    background-color: #F4FD6F;
     overflow: hidden;
     height: 3em; 
     line-height: 3em;
@@ -172,3 +216,108 @@ body {
 .number { color: #ae81ff; } 
 
 /* --- END OF CODE SECTION --- */
+
+.image-square{
+    width: 280px;
+    height: 280px;
+}
+
+.profile-label{
+    padding: 15px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+hr{
+    border-top: 1px solid #060606;
+    margin: 20px 0;
+}
+
+.profile-text-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.interests-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.socials{
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+    align-items: center;
+}
+
+#github{
+    background-image: url('images/github.png');
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+}
+
+#linkedin{
+    background-image: url('images/linkedin.png');
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+}
+
+#twitter{
+    background-image: url('images/twitter.png');
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+}
+
+#instagram{
+    background-image: url('images/instagram.png');
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+}
+
+.image-container figcaption {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    margin-top: 8px;
+}
+
+
+.invisible{
+    visibility: hidden;
+}
+
+img{
+    width: 240px;
+    height: 240px;
+
+}
+
+.profile-img-container{
+    display: flex;
+    gap: 20px;
+}
+
+figure{
+    margin: 0px;
+}
+
+
+@media (max-width: 1000px){
+    .container{
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 20px;
+}
+}
