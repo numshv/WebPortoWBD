@@ -1,0 +1,174 @@
+* {
+    font-family: 'Roboto Mono', 'SF Mono', 'Consolas';
+    box-sizing: border-box;
+}
+
+/* Note: SF Mono fallback untuk macos/ios while consolas fallback untuk windows */
+
+:root {
+  --navbar-height: 60px;
+}
+
+body {
+    background-color: #ffffff;
+    margin: 0px;
+}
+
+
+.black-text{
+    color: #060606;
+}
+
+.navbar{
+    display: flex;
+    border-bottom: 2px solid #060606;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #ffffff;
+}
+
+.navbar-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    margin: 20px 0;
+}
+
+.navbar-link{
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-link:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-decoration-color: #060606;
+}
+
+.container{
+    height: calc(100vh - var(--navbar-height));
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap-reverse;
+}
+
+/* .half-container{
+    width: 40%;
+} */
+
+.label{
+    border: 2px solid #060606;
+    border-radius: 10px;
+}
+
+.text-rotator{
+    background-color: #F4FD6F;
+    overflow: hidden;
+    height: 3em; 
+    line-height: 3em;
+    width: fit-content;
+    padding: 0 10px;
+}
+
+.text-wrapper{
+    animation: moveUp 6s infinite;
+}
+
+.text-wrapper span{
+    font-size: 20px;
+    font-weight: bold;
+    color: #060606;
+    display: block;
+}
+
+@keyframes moveUp {
+  0%, 30% {
+    transform: translateY(0);
+  }
+  
+  33%, 63% {
+    transform: translateY(-3em); 
+  }
+  66%, 100% {
+    transform: translateY(-6em); 
+  }
+}
+
+/* --- CODE SECTION --- */
+
+
+.code-container {
+    background-color: #2d2d2d;
+    margin: 30px 0;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden; /* Makesure sudut header juga membulat */
+    min-width: 500px;
+    width: 100%;
+}
+
+/* Header window isinya tombol boongan */
+.code-header {
+    background-color: #4a4a4a;
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.dot.red { background-color: #ff5f56; }
+.dot.yellow { background-color: #ffbd2e; }
+.dot.green { background-color: #27c93f; }
+
+/* Area untuk kode */
+.code-body pre {
+    margin: 0;
+    /* CSS Counter untuk nomor baris otomatis */
+    counter-reset: line-number; 
+}
+
+.code-body code {
+    font-family: 'Fira Code', monospace;
+    font-size: 10px;
+}
+
+.line {
+    display: block;
+}
+
+.line::before {
+    counter-increment: line-number; /* Menambah hitungan untuk setiap baris */
+    content: counter(line-number); /* Menampilkan nomor baris */
+    display: inline-block;
+    width: 2.5em; 
+    padding-right: 1.5em;
+    color: #6a6a6a;
+    text-align: right;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Pewarnaan Sintaks */
+.keyword { color: #f92672; } 
+.variable { color: #66d9ef; } 
+.operator { color: #f92672; } 
+.property { color: #a6e22e; } 
+.string { color: #e6db74; } 
+.boolean { color: #ae81ff; } 
+.number { color: #ae81ff; } 
+
+/* --- END OF CODE SECTION --- */
